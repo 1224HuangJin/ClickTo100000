@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>点击计数奖励系统</title>
+    <title>CLICK to 100000!!!</title>
     <style>
         body {
             display: flex;
@@ -65,21 +65,21 @@
     <!-- 加载动画 -->
     <div id="loading">
         <div class="spinner"></div>
-        <p>加载中，请稍候...</p>
+        <p>Loading, please wait... <br>加载中，请稍候...</p>
     </div>
 
     <!-- 音频元素 -->
     <audio id="background-music" autoplay loop>
         <source src="fd.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。
+        您的浏览器不支持音频播放。  Your browser does not support audio playback.
     </audio>
     <audio id="gz-music">
         <source src="gz.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。
+        您的浏览器不支持音频播放。 Your browser does not support audio playback.
     </audio>
     <audio id="gz1-music">
         <source src="gz1.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。
+        您的浏览器不支持音频播放。 Your browser does not support audio playback.
     </audio>
 
     <!-- 状态信息 -->
@@ -103,11 +103,11 @@
             // 奖励系统：设置在这些点击次数时给予奖励
             const rewardThresholds = [1000, 5000, 10000, 50000, 100000];
             const rewardMessages = [
-                "奖励1: 点击达成 1,000 次！",
-                "奖励2: 点击达成 5,000 次！",
-                "奖励3: 点击达成 10,000 次！",
-                "奖励4: 点击达成 50,000 次！",
-                "奖励5: 点击达成 100,000 次！"
+                "Congratulations! : Congratulations on reaching 1000 clicks!<br>恭喜! ：恭喜您点击了1000 次！",
+                "Congratulations! : Congratulations on reaching 5000 clicks!<br>恭喜! ：恭喜您点击了5000 次！",
+                "Congratulations! : Congratulations on reaching 10000 clicks!<br>恭喜! ：恭喜您点击了10000 次！",
+                "Congratulations! : Congratulations on reaching 50000 clicks!<br>恭喜! ：恭喜您点击了50000 次！",
+                "Congratulations! : Congratulations on reaching 100000 clicks!<br>恭喜! ：恭喜您点击了100000 次！"
             ];
 
             // 显示加载动画 3 秒钟后隐藏加载动画，并播放音乐

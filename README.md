@@ -1,2 +1,2 @@
 # ClickTo1e
-请点到1亿、然后看看你的浏览器会不会卡顿/ Please CLICK to 1e,Then see if your browser freezes
+请点击屏幕到100000(最后又奖励的哦！)/ Please Tap the screen to 100000(There’s a reward at the end!)

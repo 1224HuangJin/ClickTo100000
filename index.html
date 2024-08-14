@@ -59,6 +59,10 @@
         #background-music, #gz-music, #gz1-music {
             display: none;
         }
+        #final-image {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +75,7 @@
     <!-- 音频元素 -->
     <audio id="background-music" autoplay loop>
         <source src="fd.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。  Your browser does not support audio playback.
+        您的浏览器不支持音频播放。 Your browser does not support audio playback.
     </audio>
     <audio id="gz-music">
         <source src="gz.mp3" type="audio/mpeg">
@@ -86,6 +90,8 @@
     <div id="status-message">当前点击次数/Current number of clicks：<span id="count-display">0</span></div>
     <!-- 奖励信息 -->
     <div id="reward-message"></div>
+    <!-- 最终图片 -->
+    <img id="final-image" src="tg.png" alt="Final Reward">
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -95,6 +101,7 @@
             const backgroundMusic = document.getElementById('background-music');
             const gzMusic = document.getElementById('gz-music');
             const gz1Music = document.getElementById('gz1-music');
+            const finalImage = document.getElementById('final-image');
 
             let clickCount = 0;
             const maxCount = 100000; // 目标计数 100,000
@@ -103,11 +110,11 @@
             // 奖励系统：设置在这些点击次数时给予奖励
             const rewardThresholds = [1000, 5000, 10000, 50000, 100000];
             const rewardMessages = [
-                "Congratulations! : Congratulations on reaching 1000 clicks!                                        恭喜! ：恭喜您点击了1000 次！",
-                "Congratulations! : Congratulations on reaching 5000 clicks!                                        恭喜! ：恭喜您点击了5000 次！",
-                "Congratulations! : Congratulations on reaching 10000 clicks!                                        恭喜! ：恭喜您点击了10000 次！",
-                "Congratulations! : Congratulations on reaching 50000 clicks!                                        恭喜! ：恭喜您点击了50000 次！",
-                "Congratulations! : Congratulations on reaching 100000 clicks!                                            恭喜! ：恭喜您点击了100000 次！"
+                "恭喜您点击了1000次！",
+                "恭喜您点击了5000次！",
+                "恭喜您点击了10000次！",
+                "恭喜您点击了50000次！",
+                "恭喜您点击了100000次！"
             ];
 
             // 显示加载动画 3 秒钟后隐藏加载动画，并播放音乐
@@ -171,6 +178,12 @@
                     backgroundMusic.pause();  // 停止背景音乐
                     gzMusic.style.display = 'block'; // 显示奖励音乐
                     gzMusic.play();  // 播放 gz.mp3
+
+                    // 显示最终奖励图片
+                    finalImage.style.display = 'block';
+
+                    // 禁用点击事件处理
+                    document.body.removeEventListener('click', arguments.callee);
                 }
             });
 
